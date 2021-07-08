@@ -9,3 +9,12 @@ Telegram - https://t.me/alexjester147
 The most important priorities for me are the possibility of self-education, improvement of existing skills, a comfortable working environment and a decent salary.
 It is necessary to highlight my dedication, punctuality, politeness, I am also a perfectionist, I love when the development is perfect.
             
+4. HTML&CSS, JS, Git basics, Visual Studio Code.
+
+5. https://github.com/AlexJester147/fit-site
+https://github.com/AlexJester147/NeedForJS
+https://best-idz.ru
+
+6. https://github.com/AlexJester147/fit-site
+https://github.com/AlexJester147/NeedForJS
+https://best-idz.ru
