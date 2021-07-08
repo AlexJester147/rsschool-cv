@@ -13,18 +13,18 @@ header {
     flex-direction: column;
 }
 
-#main-logo{
+#main-logo {
     margin-top: 100px;
     text-align: center;
 }
 
-#main-logo img{
+#main-logo img {
     width: 300px;
     height: auto;
 }
 
 #social-icons {
-    margin-top:40px;
+    margin-top: 40px;
 }
 
 #social-icons ul {
@@ -36,7 +36,7 @@ header {
     justify-content: center;
 }
 
-#social-icons ul > li {
+#social-icons ul>li {
     margin: 0 20px;
 }
 
@@ -50,44 +50,61 @@ main {
     font-family: 'Open Sans', sans-serif;
     color: white;
     font-size: 22px;
-    font-weight:400;
+    font-weight: 400;
     line-height: 60px;
     word-spacing: 2px;
-flex-wrap: wrap;
-flex-direction: column;
-margin:0 15%;
+    flex-direction: column;
+    margin: 0 15%;
 }
 
 section {
     margin: 30px 0;
     display: block;
     text-align: center;
+    word-break: break-word;
 }
 
-section ul{
+section ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-section:first-child{
+section:first-child {
     margin-bottom: 0;
 }
 
-section a{
-text-decoration: none;
-color: white;
+section a {
+    text-decoration: none;
+    color: white;
 }
 
-section a:hover{
+section a:hover {
     color: green;
 }
 
 footer {
     text-align: center;
-    margin:40px;
+    margin: 40px;
     color: white;
     font-size: 30px;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
+}
+
+.github {
+    color: white;
+}
+
+.footer-container {
+    padding-top: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.rss img {
+    width: 100px;
+    height: auto;
 }
