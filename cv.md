@@ -18,3 +18,7 @@ https://best-idz.ru
 6. https://github.com/AlexJester147/fit-site
 https://github.com/AlexJester147/NeedForJS
 https://best-idz.ru
+
+7. Glo Academy courses
+
+8. A2
