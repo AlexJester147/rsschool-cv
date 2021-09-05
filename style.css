@@ -1,11 +1,17 @@
+html{
+    --bg-color: #001a33;
+    --text-color: white;
+}
+
+html[data-theme='light'] {
+    --bg-color: white;
+    --text-color: #001a33;
+}
+
 body {
     padding: 0;
     margin: 0;
-    background: #001a33;
-}
-
-::-webkit-scrollbar {
-    width: 0;
+    background-color: var(--bg-color);
 }
 
 header {
@@ -45,10 +51,17 @@ header {
     height: 40px;
 }
 
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+}
+
 main {
     display: flex;
     font-family: 'Open Sans', sans-serif;
-    color: white;
+    color: var(--text-color);
     font-size: 22px;
     font-weight: 400;
     line-height: 60px;
@@ -76,7 +89,7 @@ section:first-child {
 
 section a {
     text-decoration: none;
-    color: white;
+    color: var(--text-color);
 }
 
 section a:hover {
@@ -86,14 +99,14 @@ section a:hover {
 footer {
     text-align: center;
     margin: 40px;
-    color: white;
+    color: var(--text-color);
     font-size: 30px;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
 }
 
 .github {
-    color: white;
+    color: var(--text-color);
 }
 
 .footer-container {
@@ -107,4 +120,169 @@ footer {
 .rss img {
     width: 100px;
     height: auto;
+}
+
+.theme-switch-wrapper {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+}
+
+em {
+    margin-left: 10px;
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: #001a33;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+    border: 1px solid var(--text-color);
+    ;
+}
+
+.slider:before {
+    background-color: var(--text-color);
+    bottom: 3px;
+    content: "";
+    height: 26px;
+    left: 3px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+}
+
+input:checked+.slider {
+    background-color: var(--bg-color);
+}
+
+input:checked+.slider:before {
+    transform: translateX(27px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+html.transition,
+html.transition>* {
+    transition: all 750ms !important;
+    transition-delay: 0 !important;
+}
+
+.burger {
+    margin: 15px;
+    height: 39px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    z-index: 99;
+    transition: all .5s ease-in-out;
+}
+
+/* .burger.active{
+      margin-left: 160px;
+      transition: all .5s ease-in-out;
+  } */
+
+.line1,
+.line2,
+.line3 {
+    width: 40px;
+    height: 3px;
+    background-color: var(--text-color);
+    transition: all .5s ease-in-out;
+}
+
+.line1.active {
+    width: 50px;
+    transform-origin: left;
+    transform: rotate(45deg);
+    transition: all .5s ease-in-out;
+}
+
+.line2.passive {
+    width: 0px;
+    transition: all .5s ease-in-out;
+}
+
+.line3.active {
+    width: 50px;
+    transform-origin: left;
+    transform: rotate(-45deg);
+    transition: all .5s ease-in-out;
+}
+
+
+.burger-menu {
+    font-size: 20px;
+    font-family: 'Open Sans',sans-serif;
+    text-transform: uppercase;
+    background-color: var(--bg-color);
+    position: fixed;
+    top: 69px;
+    left: -202px;
+    transition: all .5s ease-in-out;
+    width: 200px;
+    z-index: 98;
+    border-right: 2px solid var(--text-color);
+    border-bottom: 2px solid var(--text-color);
+    z-index: 100;
+}
+
+.burger-menu.active {
+    left: 0;
+    transition: all .5s ease-in-out;
+}
+
+.burger-menu nav ul{
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.burger-menu nav ul li{
+    margin-bottom: 25px;
+}
+
+.burger-menu nav ul li a{
+    text-decoration: none;
+    color: var(--text-color);
+    transition: all .5s ease-in-out;
+}
+
+.burger-menu nav ul li a:hover{
+    color: green;
+    transition: all .5s ease-in-out;
+}
+
+.header-wrap{
+    width: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color:var(--bg-color);
+    border-bottom: 2px solid var(--text-color);
+    z-index: 100;
 }
