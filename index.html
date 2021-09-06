@@ -1,97 +1,269 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme='dark'>
 
 <head>
   <title>CV</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+  <script>
+    hljs.highlightAll();
+  </script>
 </head>
 
 <body>
   <header>
+    <div class="header-wrap">
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+
+      <div class="burger-menu">
+        <nav>
+          <ul>
+            <li><a href="#contacts">contacts</a></li>
+            <li><a href="#about">about me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#code">code</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#english">my English</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="theme-switch-wrapper">
+        <label class="theme-switch">
+          <input type="checkbox" class="theme-switch__checkbox" />
+          <div class="slider round"></div>
+        </label>
+      </div>
+
+    </div>
+
     <div id="main-logo">
       <img src="image/logo.png" alt="Logo">
     </div>
-    <nav>
-      <div id="social-icons">
-        <ul>
-          <li><a href="https://github.com/AlexJester147"><img src="image/github.svg" alt="Github"></a></li>
-          <li><a href="https://vk.com/alexjester147"><img src="image/vk.svg" alt="VK"></a></li>
-          <li><a href="https://www.instagram.com/alexjester147"><img src="image/insta.svg" alt="Instagram"></a></li>
-          <li><a href="https://t.me/alexjester147"><img src="image/telegram.svg" alt="Telegram"></a></li>
-        </ul>
-      </div>
-    </nav>
+
+
   </header>
 
   <main>
     <section>
-      <h3><b>My name is</b></h3> Mazurin Alexander
+      <h1>My name is</h1>
+      <article>Mazurin Alexander</article>
     </section>
-    <section>
-      <h4><b>How to contact me :</b></h4>
+
+
+    <section id="contacts">
+
+      <article>
+        <h2>How to contact me</h2>
+        <nav>
+          <div id="social-icons">
+            <ul>
+              <li>
+                <a href="https://github.com/AlexJester147" target="_blank">
+                  <img src="image/github.png" alt="Github">
+                </a>
+              </li>
+              <li>
+                <a href="https://vk.com/alexjester147" target="_blank">
+                  <img src="image/vk.svg" alt="VK">
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/alexjester147" target="_blank">
+                  <img src="image/insta.svg" alt="Instagram">
+                </a>
+              </li>
+              <li>
+                <a href="https://t.me/alex_jester_147" target="_blank">
+                  <img src="image/telegram.svg" alt="Telegram">
+                </a>
+              </li>
+              <li>
+                <a href="mailto:vardy2016@lenta.ru" target="_blank">
+                  <img src="image/gmail.png" alt="Mail">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </article>
+    </section>
+
+    <section id="about">
+      <h3>Some words about me</h3>
+      <article>
+        I enjoy learning new things about technology, process and
+        development.
+        The most important priorities for me are the possibility of self-education, improvement of existing skills,
+        a comfortable working environment and a decent salary.
+        It is necessary to highlight my dedication, punctuality, politeness, I am also a perfectionist, I love when
+        the development is perfect.
+      </article>
+    </section>
+
+    <section id="skills">
+      <h4>Skills and technologies</h4>
+      <article>
+        <ul>
+          <li><img src="image/html.png" alt="HTML"></li>
+          <li><img src="image/css.png" alt="CSS"></li>
+          <li><img src="image/js.png" alt="JavaScript"></li>
+          <li><img src="image/git.png" alt="Git"></li>
+          <li><img src="image/vscode.png" alt="Visual Studio Code"></li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="code" style="padding-bottom: 0px;">
+      <h4 style="padding-bottom: 0;
+      margin-bottom: -30px;">Code</h4>
+      <pre>
+      <code class="html">
+        function solveSudoku(array) {
+
+          function valid(array, row, col, value) {
+      
+            for (let i = 0; i < 9; i++) {
+              const m = 3 * Math.floor(row / 3) + Math.floor(i / 3)
+              const n = 3 * Math.floor(col / 3) + i % 3
+              if (matrix[row][i] == k || matrix[i][col] == k || matrix[m][n] == k) {
+                return false
+              }
+            }
+            return true
+          }
+      
+          for (let i = 0; i < 9; i++) {
+            for (let j = 0; j < 9; i++) {
+              if (matrix[i][j] == 0) {
+                for (let k = 1; k <= 9; k++) {
+                  if (valid(array, i, j, k)) {
+                    matrix[i][j] = k;
+                    if (solveSudoku(array)) {
+                      return array;
+                    } else {
+                      matrix[i][j] = 0;
+                    }
+                  }
+                }
+                return false;
+              }
+            }
+          }
+      
+          return matrix
+      
+        }
+      
+      </code>
+    </pre>
+    </section>
+
+    <section id="experience">
+      <h4>Experience & projects</h4>
       <ul>
         <li>
-          Vkontakte -
-          <a href="https://vk.com/alexjester147" target="_blank">https://vk.com/alexjester147</a>
+
+          <a href="https://best-idz.ru" target="_blank">
+            <img src="/image/idz.png">
+          </a>
+          <div class="projects-caption">
+            <a href="https://best-idz.ru" target="_blank">Best-idz.ru</a>
+          </div>
         </li>
+
         <li>
-          Instagram - <a href="https://www.instagram.com/alexjester147" target="_blank">
-            https://www.instagram.com/alexjester147</a>
+          <a href="https://alexjester147.github.io/NeedForJS/" target="_blank">
+            <img src="/image/speed.png">
+          </a>
+          <div class="projects-caption">
+            <a href="https://alexjester147.github.io/NeedForJS/" target="_blank">NeedForJS</a>
+          </div>
         </li>
+      
         <li>
-          Telegram - <a href="https://t.me/alex_jester_147" target="_blank">https://t.me/alex_jester_147</a>
+          <a href="https://alexjester147.github.io/whack-a-mole/" target="_blank">
+            <img src="/image/whackamole.png">
+          </a>
+          <div class="projects-caption">
+            <a href="https://alexjester147.github.io/whack-a-mole/" target="_blank">Whack-a-mole</a>
+          </div>
+        </li>
+
+        <li>
+          <a href="https://alexjester147.github.io/fit-site/" target="_blank">
+            <img src="/image/fit.png">
+          </a>
+          <div class="projects-caption">
+            <a href="https://alexjester147.github.io/fit-site/" target="_blank">Fitness site</a>
+          </div>
+        </li>
+        
+        <li>
+          <a href="https://alexjester147-virtual-piano.netlify.app" target="_blank">
+            <img src="/image/piano.png">
+          </a>
+          <div class="projects-caption">
+            <a href="https://alexjester147-virtual-piano.netlify.app" target="_blank">Virtual piano</a>
+          </div>
+        </li>
+
+        <li>
+          <a href="https://alexjester147-photo-filter.netlify.app/" target="_blank">
+            <img src="/image/photofilter.png">
+          </a>
+          <div class="projects-caption">
+            <a href="https://alexjester147-photo-filter.netlify.app/" target="_blank">Photofilter</a>
+          </div>
         </li>
       </ul>
     </section>
 
-    <section>
-      <h4><b>Some words about me :</b></h4> I enjoy learning new things about technology, process and
-      development.
-      The most important priorities for me are the possibility of self-education, improvement of existing skills,
-      a comfortable working environment and a decent salary.
-      It is necessary to highlight my dedication, punctuality, politeness, I am also a perfectionist, I love when
-      the development is perfect.
+    <section id="education">
+      <h4>Education</h4>
+      <ul>
+        <li>Studying on <a href="https://learn.javascript.ru/">learn.javascript.ru</a></li>
+        <li>Self-education</li>
+        <li><a href="https://www.codewars.com/users/AlexJester147">Codewars</a></li>
+        <li><a href="https://www.sololearn.com/profile/10543635">SoloLearn</a></li>
+        <ul class="rs-courses">RSSchool courses : 
+          <li>JS/FE Pre-School</li>
+          <li>JavaScript/Front-end 2021Q1</li>
+          <li>JavaScript/Front-end 2021Q3</li>
+      </ul>
+        <li>Glo Academy courses</li>
+        <li>Development of your own project ( <a href="best-idz.ru">best-idz.ru</a> )</li>
+      </ul>
     </section>
-    <section>
-      <h4><b>Skills and technologies :</b></h4> HTML&CSS, JS, Git basics, Visual Studio Code
+
+    <section id="english">
+      <h4>My English</h4>
+      <article>A2</article>
     </section>
-    <section>
-      <h4><b>Code examples :</b></h4>
-      <a href="https://github.com/AlexJester147/fit-site">https://github.com/AlexJester147/fit-site</a><br>
-      <a href="https://github.com/AlexJester147/NeedForJ">https://github.com/AlexJester147/NeedForJS</a><br>
-      <a href="https://best-idz.ru">https://best-idz.ru</a>
-    </section>
-    <section>
-      <h4><b>Experience : </b></h4>
-      <a href="https://github.com/AlexJester147/fit-site">https://github.com/AlexJester147/fit-site</a><br>
-      <a href="https://github.com/AlexJester147/NeedForJ">https://github.com/AlexJester147/NeedForJS</a><br>
-      <a href="https://best-idz.ru">https://best-idz.ru</a>
-    </section>
-    <section>
-      <h4><b>
-          Education :
-        </b></h4>self-education, Glo Academy courses, development of your own project (<a
-        href="best-idz.ru">best-idz.ru</a>)
-    </section>
-    <section>
-      <h4><b>English level : </b></h4>
-      A2
-    </section>
+
   </main>
 
   <footer>
-    Thanks!
-     <div class="footer-container">
-      <a class="github" href="https://github.com/AlexJester147" target="_blank" rel="noopener noreferrer">github 
+    <div class="footer-container">
+      <a class="github" href="https://github.com/AlexJester147" target="_blank" rel="noopener noreferrer">github
         <span class="rss-year">'21</span></a>
       <a class="rss" href="https://rs.school/js/" target="_blank" rel="noopener">
-        <img src="https://rs.school/images/rs_school_js.svg">
+        <img src="https://rs.school/images/rs_school_js.svg" alt="RSSchool">
       </a>
     </div>
   </footer>
 
 </body>
+
+
 
 </html>
