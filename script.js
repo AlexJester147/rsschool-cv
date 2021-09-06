@@ -1,9 +1,8 @@
 const checkbox = document.querySelector('.theme-switch__checkbox');
 const burger = document.querySelector('.burger');
 const burgerMenu = document.querySelector('.burger-menu');
+const burgerMenuLinks = document.querySelectorAll('.burger-menu a');
 
-
-console.log(burgerMenu)
 
 checkbox.addEventListener('change', function (){
   transition();
@@ -13,7 +12,7 @@ checkbox.addEventListener('change', function (){
     
     document.documentElement.setAttribute('data-theme','dark');
   }
-})
+});
 
 
 function transition(){
@@ -21,19 +20,25 @@ document.documentElement.classList.add('transition');
 
 setTimeout(() =>{
   document.documentElement.classList.remove('transition');
-},500);
+},400);
 }
 
+const clickBurger = () => {
+    burger.children[0].classList.toggle('active');
+    burger.children[1].classList.toggle('passive');
+    burger.children[2].classList.toggle('active');
+    burgerMenu.classList.toggle('active');
+};
 
 burger.addEventListener('click', () => {
-burger.children[0].classList.toggle('active');
-burger.children[1].classList.toggle('passive');
-burger.children[2].classList.toggle('active');
-// burger.classList.toggle('active')
+clickBurger();
+});
 
-burgerMenu.classList.toggle('active');
-})
-
+burgerMenuLinks.forEach(el => {
+el.addEventListener('click', () => {
+  clickBurger();
+});
+});
 
 window.addEventListener('click', function(e) {
 

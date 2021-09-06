@@ -1,6 +1,8 @@
 html{
     --bg-color: #001a33;
     --text-color: white;
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 html[data-theme='light'] {
@@ -30,7 +32,7 @@ header {
 }
 
 #social-icons {
-    margin-top: 40px;
+    margin-top: 10px;
 }
 
 #social-icons ul {
@@ -39,16 +41,18 @@ header {
     list-style: none;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    max-width: 400px;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-#social-icons ul>li {
-    margin: 0 20px;
+#social-icons ul li{
+    display: flex;
 }
 
 #social-icons ul li img {
-    width: 40px;
-    height: 40px;
+    width: auto;
+    height: 60px;
 }
 
 h1,
@@ -56,6 +60,9 @@ h2,
 h3,
 h4 {
     margin: 0;
+    text-transform: uppercase;
+    font-size: 24px;
+    padding-bottom: 15px;
 }
 
 main {
@@ -67,17 +74,19 @@ main {
     line-height: 60px;
     word-spacing: 2px;
     flex-direction: column;
-    margin: 0 15%;
+    margin: auto;
+    max-width: 80%;
 }
 
 section {
-    margin: 30px 0;
+    padding: 60px 0;
+    line-height: 2;
     display: block;
-    text-align: center;
+    text-align: left;
     word-break: break-word;
 }
 
-section ul {
+section ul{
     list-style: none;
     padding: 0;
     margin: 0;
@@ -117,19 +126,20 @@ footer {
     justify-content: space-evenly;
 }
 
+.rss{
+    display: flex;
+    background-color:white;
+}
+
 .rss img {
     width: 100px;
     height: auto;
 }
 
 .theme-switch-wrapper {
-    margin: 10px;
+    margin: 15px;
     display: flex;
     align-items: center;
-}
-
-em {
-    margin-left: 10px;
 }
 
 .theme-switch {
@@ -184,20 +194,20 @@ input:checked+.slider:before {
 }
 
 html.transition,
-html.transition>* {
-    transition: all 750ms !important;
+html.transition > * {
+    transition: all .4s !important;
     transition-delay: 0 !important;
 }
 
 .burger {
     margin: 15px;
-    height: 39px;
+    height: 40px;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     z-index: 99;
-    transition: all .5s ease-in-out;
+
 }
 
 /* .burger.active{
@@ -209,28 +219,28 @@ html.transition>* {
 .line2,
 .line3 {
     width: 40px;
-    height: 3px;
+    height: 4px;
     background-color: var(--text-color);
-    transition: all .5s ease-in-out;
+    transition: all .4s ease-in-out;
 }
 
 .line1.active {
     width: 50px;
     transform-origin: left;
     transform: rotate(45deg);
-    transition: all .5s ease-in-out;
+    transition: all .4s ease-in-out;
 }
 
 .line2.passive {
     width: 0px;
-    transition: all .5s ease-in-out;
+    transition: all .4s ease-in-out;
 }
 
 .line3.active {
     width: 50px;
     transform-origin: left;
     transform: rotate(-45deg);
-    transition: all .5s ease-in-out;
+    transition: all .4s ease-in-out;
 }
 
 
@@ -240,9 +250,9 @@ html.transition>* {
     text-transform: uppercase;
     background-color: var(--bg-color);
     position: fixed;
-    top: 69px;
+    top: 70px;
     left: -202px;
-    transition: all .5s ease-in-out;
+    transition: all .4s ease-in-out;
     width: 200px;
     z-index: 98;
     border-right: 2px solid var(--text-color);
@@ -252,7 +262,7 @@ html.transition>* {
 
 .burger-menu.active {
     left: 0;
-    transition: all .5s ease-in-out;
+    transition: all .4s ease-in-out;
 }
 
 .burger-menu nav ul{
@@ -268,12 +278,12 @@ html.transition>* {
 .burger-menu nav ul li a{
     text-decoration: none;
     color: var(--text-color);
-    transition: all .5s ease-in-out;
+    transition: all .4s ease-in-out;
 }
 
 .burger-menu nav ul li a:hover{
     color: green;
-    transition: all .5s ease-in-out;
+    transition: all .4s ease-in-out;
 }
 
 .header-wrap{
@@ -285,4 +295,92 @@ html.transition>* {
     background-color:var(--bg-color);
     border-bottom: 2px solid var(--text-color);
     z-index: 100;
+    transition: all .4s ease-in-out;
+}
+
+.article-code{
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    padding: 20px;
+}
+
+.hljs{
+    line-height: 1.5;
+    background-color:var(--text-color);
+    font-size: large;
+    padding: 0!important;
+}
+
+pre{
+    margin: 0;
+}
+
+#skills{
+    margin-top: 10px;
+}
+
+#skills img{
+    width: auto;
+    height: 60px;
+}
+
+#skills ul{
+    display: flex;
+    flex-direction: row;
+    max-width: 400px;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+#skills ul li{
+    display: flex;
+}
+
+
+.rs-courses li{
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.rs-courses li::before{
+    content: '';
+    position: relative;
+    right: 10px;
+    width: 0px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: green;
+    padding-left: 10px;
+}
+
+#education a, .projects-caption a{
+border-bottom: 1px solid var(--text-color);;
+}
+
+#experience ul{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+#experience li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#experience img{
+    max-width: 400px;
+    height: auto;
+    display: block;
+    min-width: 200px;
+    width: 100%;
+}
+
+.projects-caption{
+    margin-top: 10px;
 }
