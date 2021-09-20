@@ -336,13 +336,13 @@ pre{
 }
 
 
-.rs-courses li{
+.rs-courses{
     padding-left: 10px;
     display: flex;
     align-items: center;
 }
 
-.rs-courses li::before{
+.rs-courses::before{
     content: '';
     position: relative;
     right: 10px;
