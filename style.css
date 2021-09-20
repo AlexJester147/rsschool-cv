@@ -3,6 +3,8 @@ html{
     --text-color: white;
     scroll-behavior: smooth;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    max-width: 1920px;
+    margin: auto;
 }
 
 html[data-theme='light'] {
@@ -286,6 +288,7 @@ html.transition > * {
 }
 
 .header-wrap{
+    max-width: 1920px;
     width: 100%;
     position: fixed;
     display: flex;
