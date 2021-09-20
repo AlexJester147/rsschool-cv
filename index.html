@@ -2,7 +2,7 @@
 <html lang="ru" data-theme='dark'>
 
 <head>
-  <title>CV</title>
+  <title>Frontend developer Mazurin Alexander</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
@@ -26,6 +26,7 @@
       <div class="burger-menu">
         <nav>
           <ul>
+            <li><a href="#hi">hi!</a></li>
             <li><a href="#contacts">contacts</a></li>
             <li><a href="#about">about me</a></li>
             <li><a href="#skills">Skills</a></li>
@@ -54,9 +55,9 @@
   </header>
 
   <main>
-    <section>
-      <h1>My name is</h1>
-      <article>Mazurin Alexander</article>
+    <section id="hi">
+      <h1>Hi !</h1>
+      <article>My name is Mazurin Alexander, I am 21 years old and I am beginner frontend developer</article>
     </section>
 
 
@@ -124,46 +125,36 @@
     </section>
 
     <section id="code" style="padding-bottom: 0px;">
-      <h4 style="padding-bottom: 0;
-      margin-bottom: -30px;">Code</h4>
-      <pre>
+      <h4>Code</h4>
+      <article style="margin-bottom: -50px;">Correct sequence of parentheses</article>
+      <pre> 
       <code class="html">
-        function solveSudoku(array) {
-
-          function valid(array, row, col, value) {
-      
-            for (let i = 0; i < 9; i++) {
-              const m = 3 * Math.floor(row / 3) + Math.floor(i / 3)
-              const n = 3 * Math.floor(col / 3) + i % 3
-              if (matrix[row][i] == k || matrix[i][col] == k || matrix[m][n] == k) {
-                return false
-              }
-            }
-            return true
-          }
-      
-          for (let i = 0; i < 9; i++) {
-            for (let j = 0; j < 9; i++) {
-              if (matrix[i][j] == 0) {
-                for (let k = 1; k <= 9; k++) {
-                  if (valid(array, i, j, k)) {
-                    matrix[i][j] = k;
-                    if (solveSudoku(array)) {
-                      return array;
-                    } else {
-                      matrix[i][j] = 0;
-                    }
-                  }
-                }
-                return false;
-              }
+        function isValid(s){
+  
+          const brackets = {
+            ")": "(",
+            "]": "[",
+            "}": "{"
+          };
+        
+          const stack = [];
+        
+          for (let i=0; i < s.length; i++){
+        const current = s[i]
+        
+            if (isClosedBracket(current)) {
+              if (brackets[current] !== stack.pop()) return false;
+            } else {
+              stack.push(current);
             }
           }
-      
-          return matrix
-      
+        
+          return stack.length === 0;
         }
-      
+        
+        function isClosedBracket(ch) {
+          return [")", "]", "}"].indexOf(ch) > -1;
+        }
       </code>
     </pre>
     </section>
@@ -174,16 +165,16 @@
         <li>
 
           <a href="https://best-idz.ru" target="_blank">
-            <img src="/image/idz.png">
+            <img src=".//image/idz.png">
           </a>
           <div class="projects-caption">
-            <a href="https://best-idz.ru" target="_blank">Best-idz.ru</a>
+            <a href="https://best-idz.ru" target="_blank">best-idz.ru</a>
           </div>
         </li>
 
         <li>
           <a href="https://alexjester147.github.io/NeedForJS/" target="_blank">
-            <img src="/image/speed.png">
+            <img src=".//image/speed.png">
           </a>
           <div class="projects-caption">
             <a href="https://alexjester147.github.io/NeedForJS/" target="_blank">NeedForJS</a>
@@ -192,7 +183,7 @@
       
         <li>
           <a href="https://alexjester147.github.io/whack-a-mole/" target="_blank">
-            <img src="/image/whackamole.png">
+            <img src=".//image/whackamole.png">
           </a>
           <div class="projects-caption">
             <a href="https://alexjester147.github.io/whack-a-mole/" target="_blank">Whack-a-mole</a>
@@ -201,7 +192,7 @@
 
         <li>
           <a href="https://alexjester147.github.io/fit-site/" target="_blank">
-            <img src="/image/fit.png">
+            <img src=".//image/fit.png">
           </a>
           <div class="projects-caption">
             <a href="https://alexjester147.github.io/fit-site/" target="_blank">Fitness site</a>
@@ -210,7 +201,7 @@
         
         <li>
           <a href="https://alexjester147-virtual-piano.netlify.app" target="_blank">
-            <img src="/image/piano.png">
+            <img src=".//image/piano.png">
           </a>
           <div class="projects-caption">
             <a href="https://alexjester147-virtual-piano.netlify.app" target="_blank">Virtual piano</a>
@@ -219,7 +210,7 @@
 
         <li>
           <a href="https://alexjester147-photo-filter.netlify.app/" target="_blank">
-            <img src="/image/photofilter.png">
+            <img src=".//image/photofilter.png">
           </a>
           <div class="projects-caption">
             <a href="https://alexjester147-photo-filter.netlify.app/" target="_blank">Photofilter</a>
@@ -231,6 +222,7 @@
     <section id="education">
       <h4>Education</h4>
       <ul>
+        <li>Baranovichi State University (2018-2022), specialty digital marketing</li>
         <li>Studying on <a href="https://learn.javascript.ru/">learn.javascript.ru</a></li>
         <li>Self-education</li>
         <li><a href="https://www.codewars.com/users/AlexJester147">Codewars</a></li>
