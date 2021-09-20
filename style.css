@@ -163,7 +163,6 @@ footer {
     top: 0;
     transition: .4s;
     border: 1px solid var(--text-color);
-    ;
 }
 
 .slider:before {
